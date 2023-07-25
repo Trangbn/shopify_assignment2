@@ -20,7 +20,7 @@ $ yarn run start
 - Step 2: Adding new product if need
 - Step 3: Can process further logic such as: editing product, placing order
 
-# Completed
+# Deliveries
 - [x] Product Listing / Form:
 - Fetch and display a list of products from an API using a general Axios instance for
   network requests.
@@ -50,7 +50,7 @@ $ yarn run start
 - Yarn 1.x
 - PostgreSQL 15.x
 
-# Completed
+# Deliveries
 - [x] Implement user authentication and authorization using a secure method such as JWT
 (JSON Web Tokens).
 - [x] Create API endpoints to handle user registration, login, and logout.
