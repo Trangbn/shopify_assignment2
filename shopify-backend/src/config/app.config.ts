@@ -5,5 +5,5 @@ export default (): Record<string, any> => ({
   maxPasswordLength: 24,
   apiPrefix: process.env.API_PREFIX,
   throttleTtl: process.env.THROTTLE_TTL,
-  throttleLimit: process.env.THROTTLE_LIMIT
+  throttleLimit: process.env.THROTTLE_LIMIT,
 });

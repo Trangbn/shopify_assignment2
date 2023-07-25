@@ -39,4 +39,4 @@ import { ConfigService } from '@nestjs/config';
   providers: [MailService, WinstonLogger],
   exports: [MailService],
 })
-export class MailModule { }
+export class MailModule {}

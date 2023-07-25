@@ -66,7 +66,7 @@ import { WinstonLogger } from './logger/winston.logger';
       provide: APP_GUARD,
       useClass: ThrottlerBehindProxyGuard,
     },
-    WinstonLogger
+    WinstonLogger,
   ],
 })
 export class AppModule implements NestModule {

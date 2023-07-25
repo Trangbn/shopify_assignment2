@@ -6,8 +6,8 @@ import { Injectable } from '@nestjs/common';
 export class MailService {
   constructor(
     private mailerService: MailerService,
-    private readonly logger: WinstonLogger
-  ) { }
+    private readonly logger: WinstonLogger,
+  ) {}
 
   async sendUserConfirmation(user: UserInfo, url?: string) {
     try {
@@ -21,7 +21,7 @@ export class MailService {
         },
       });
     } catch (error) {
-      this.logger.error(`${JSON.stringify(error)}`,'Send email error');
+      this.logger.error(`${JSON.stringify(error)}`, 'Send email error');
     }
   }
 }

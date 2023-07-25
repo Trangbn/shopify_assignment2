@@ -2,7 +2,6 @@ import { WinstonLogger } from './../logger/winston.logger';
 import { Logger } from '@nestjs/common';
 import { NextFunction, Request, Response } from 'express';
 
-
 type Next = () => Promise<NextFunction>;
 
 export const loggerMiddleware = async (
@@ -10,7 +9,7 @@ export const loggerMiddleware = async (
   res: Response,
   next: Next,
 ) => {
-  const winstonLogger = new WinstonLogger()
+  const winstonLogger = new WinstonLogger();
   const message = `${req.method} ${req.url}`;
   const startTime = Date.now();
 
@@ -23,6 +22,8 @@ export const loggerMiddleware = async (
     Logger.debug(
       `End: ${message} ${res.statusCode} - ${Date.now() - startTime}ms`,
     );
-    winstonLogger.log(`End: ${message} ${res.statusCode} - ${Date.now() - startTime}ms`);
+    winstonLogger.log(
+      `End: ${message} ${res.statusCode} - ${Date.now() - startTime}ms`,
+    );
   });
 };

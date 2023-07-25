@@ -34,4 +34,3 @@ export class UpdateProductDto {
   @IsNumber()
   price: number;
 }
-

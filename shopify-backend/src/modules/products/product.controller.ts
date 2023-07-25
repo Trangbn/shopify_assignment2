@@ -3,7 +3,16 @@ import { PageOptionsDto } from './../../common/dto/pagination-options.dto';
 import { HttpStatus } from '@nestjs/common/enums';
 import { ApiError } from './../../filter/api.error';
 import { ProductService } from './product.service';
-import { Body, Controller, Post, Get, Query, Put, Delete, Param } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Post,
+  Get,
+  Query,
+  Put,
+  Delete,
+  Param,
+} from '@nestjs/common';
 import { ApiBearerAuth, ApiBody, ApiTags } from '@nestjs/swagger';
 import { CreateProductDto, UpdateProductDto } from './dto/product-request.dto';
 import { IProduct } from './interfaces/product.interface';
@@ -12,7 +21,7 @@ import { Product } from './product.entity';
 @Controller('products')
 @ApiTags('Product')
 export class ProductController {
-  constructor(private readonly productService: ProductService) { }
+  constructor(private readonly productService: ProductService) {}
 
   @Get()
   async getProductList(

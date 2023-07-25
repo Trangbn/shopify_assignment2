@@ -25,10 +25,9 @@ import { UserService } from '../users/user.service';
       inject: [ConfigService],
     }),
     MailModule,
-
   ],
   providers: [AuthService, UserService, UserRepository, WinstonLogger],
   controllers: [AuthController],
   exports: [AuthService, UserService, UserRepository],
 })
-export class AuthModule { }
+export class AuthModule {}

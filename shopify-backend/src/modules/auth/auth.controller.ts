@@ -11,8 +11,8 @@ import { CreateUserDto } from '../users/dto/create-user.dto';
 export class AuthController {
   constructor(
     private readonly authService: AuthService,
-    private readonly logger: WinstonLogger
-  ) { }
+    private readonly logger: WinstonLogger,
+  ) {}
 
   @Get('/')
   ping(): string {
@@ -21,7 +21,7 @@ export class AuthController {
 
   @Post('/login')
   login(@Body() body: UserLoginDto): Promise<UserInfo> {
-    this.logger.log(`LOGIN: ${body.email}  logined`)
+    this.logger.log(`LOGIN: ${body.email}  logined`);
     return this.authService.generateJwtToken(body);
   }
 
